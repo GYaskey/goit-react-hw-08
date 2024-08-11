@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 1rem;
+
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.button:nth-child(1) {
+  background-color: #4caf50;
+}
+.button:nth-child(2) {
+  background-color: #4c94af;
+}
+.button:nth-child(3) {
+  background-color: #b24358;
+}
+
+.button:nth-child(1):hover {
+  background-color: #3f9542;
+}
+.button:nth-child(2):hover {
+  background-color: #3f7c92;
+}
+.button:nth-child(3):hover {
+  background-color: #8c3242;
+}
+
+.resetButton {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.resetButton:hover {
+  background-color: #d32f2f;
+}
