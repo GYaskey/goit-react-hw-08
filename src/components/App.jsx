@@ -7,7 +7,6 @@ import Notification from './Notification/Notification';
 export default function App() {
   const [options, setOptions] = useState(() => {
     const savedOptions = window.localStorage.getItem('options');
-    console.log(savedOptions);
     if (savedOptions !== null) {
       return JSON.parse(savedOptions);
     }
