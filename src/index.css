@@ -23,8 +23,7 @@ a:hover {
 }
 
 body {
-  margin-top: 50px;
-  margin-left: 50px;
+  margin: 50px;
   min-width: 320px;
   min-height: 100vh;
   font-family: sans-serif;
