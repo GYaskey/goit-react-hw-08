@@ -3,6 +3,7 @@ import ContactList from './ContactList/ContactList';
 import SearchBox from './SearchBox/SearchBox';
 import contactList from '../assets/contacts.json';
 import { useState } from 'react';
+import './App.css';
 
 const initialState = contactList;
 
