@@ -1,7 +1,7 @@
 import { useId } from 'react';
 import s from './SearchBox.module.css';
 
-const SearchBox = () => {
+const SearchBox = ({ setSearch, search }) => {
   const searchId = useId();
 
   return (
@@ -10,6 +10,8 @@ const SearchBox = () => {
         Find contacts by name
       </label>
       <input
+        value={search}
+        onChange={e => setSearch(e.target.value)}
         type="text"
         placeholder="Type your request..."
         id={searchId}
