@@ -2,10 +2,14 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import s from './ContactForm.module.css';
 import { useId } from 'react';
 import * as Yup from 'yup';
+import { nanoid } from 'nanoid';
+import { addContact } from '../../redux/contactSlice';
+import { useDispatch } from 'react-redux';
 
-const ContactForm = ({ handleAddContact }) => {
+const ContactForm = () => {
   const usernameID = useId();
   const numberId = useId();
+  const dispatch = useDispatch();
 
   const initialValues = {
     name: '',
@@ -24,7 +28,8 @@ const ContactForm = ({ handleAddContact }) => {
   });
 
   const handleSubmit = (values, options) => {
-    handleAddContact(values);
+    const newContact = { id: nanoid(), ...values };
+    dispatch(addContact(newContact));
     options.resetForm();
   };
 
@@ -37,12 +42,12 @@ const ContactForm = ({ handleAddContact }) => {
       <Form className={s.form}>
         <label htmlFor="usernameID" className={s.formLabel}>
           Name
-          <Field name="name" id={usernameID} className={s.input}></Field>
+          <Field name="name" id={usernameID} className={s.input} type="text" />
           <ErrorMessage name="name" component="span" className={s.error} />
         </label>
         <label htmlFor="numberId" className={s.formLabel}>
           Number
-          <Field name="number" id={numberId} className={s.input}></Field>
+          <Field name="number" id={numberId} className={s.input} type="text" />
           <ErrorMessage name="number" component="span" className={s.error} />
         </label>
         <button type="submit" className={s.btn}>

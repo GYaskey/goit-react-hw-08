@@ -1,24 +1,25 @@
 .searchBox {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 400px;
-  margin: 40px auto;
+  width: 400px;
+
   padding: 15px;
-  background-color: #d0d0d0;
+  background-color: #003135;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #afdde5;
 }
 
 .searchLabel {
   font-size: 16px;
   font-weight: 600;
-  color: #333;
+  color: #afdde5;
 }
 
 .searchField {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #024950;
   border-radius: 4px;
   font-size: 16px;
   outline: none;
@@ -26,5 +27,5 @@
 }
 
 .searchField:focus {
-  border-color: #3bedcc;
+  border-color: #0fa4af;
 }

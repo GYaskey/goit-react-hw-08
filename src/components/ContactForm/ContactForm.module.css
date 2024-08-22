@@ -1,13 +1,14 @@
 .form {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 400px;
-  margin: 40px auto;
+  width: 400px;
+
   padding: 20px;
-  background-color: #d0d0d0;
+  background-color: #024950;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #afdde5;
 }
 
 .formLabel {
@@ -20,7 +21,7 @@
 
 .input {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #003135;
   border-radius: 4px;
   font-size: 16px;
   outline: none;
@@ -28,17 +29,17 @@
 }
 
 .input:focus {
-  border-color: #3bedcc;
+  border-color: #0fa4af;
 }
 
 .error {
-  color: #d9534f;
+  color: #964734;
   font-size: 14px;
 }
 
 .btn {
-  background-color: #3bedcc;
-  color: #333;
+  background-color: #964734;
+  color: #afdde5;
   border: none;
   outline: none;
   padding: 8px 12px;
@@ -50,8 +51,8 @@
 
 .btn:hover,
 .btn:focus {
-  background-color: #333;
-  color: #fff;
+  background-color: #003135;
+  color: #afdde5;
   outline: none;
   border: none;
 }

@@ -1,24 +1,27 @@
 import s from './Contact.module.css';
 import { IoPerson } from 'react-icons/io5';
 import { FaPhone } from 'react-icons/fa6';
+import { useDispatch } from 'react-redux';
+import { deleteContact } from '../../../redux/contactSlice';
 
-const Contact = ({ contact, handleDeleteContact }) => {
+const Contact = ({ id, name, number }) => {
+  const dispatch = useDispatch();
   return (
     <li className={s.contactItem}>
       <div className={s.contactInfo}>
         <p className={s.contactName}>
           <IoPerson />
-          {contact.name}
+          {name}
         </p>
-        <a href={`tel:${contact.number}`} className={s.contactLink}>
+        <a href={`tel:${number}`} className={s.contactLink}>
           <FaPhone />
-          {contact.number}
+          {number}
         </a>
       </div>
       <button
         type="button"
         className={s.btn}
-        onClick={() => handleDeleteContact(contact.id)}
+        onClick={() => dispatch(deleteContact(id))}
       >
         Delete
       </button>
