@@ -2,9 +2,8 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import s from './ContactForm.module.css';
 import { useId } from 'react';
 import * as Yup from 'yup';
-
 import { useDispatch } from 'react-redux';
-import { addContactThunk } from '../../redux/contactsOps';
+import { addContactThunk } from '../../redux/contacts/contactsOps';
 
 const ContactForm = () => {
   const usernameID = useId();
