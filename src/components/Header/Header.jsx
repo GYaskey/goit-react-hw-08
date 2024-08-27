@@ -1,10 +1,15 @@
-import NavBar from '../NavBar/NavBar';
+import AuthNav from '../AuthNav/AuthNav';
+import Navigation from '../Navigation/Navigation';
 import styles from './Header.module.css';
 
 const Header = () => {
   return (
     <header className={styles.header}>
-      <NavBar />
+      <nav>
+        <Navigation />
+        <AuthNav />
+        {/* {isLoggedIn ? <UserMenu /> : <AuthNav />} */}
+      </nav>
     </header>
   );
 };
