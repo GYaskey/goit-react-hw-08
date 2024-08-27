@@ -9,6 +9,7 @@ import {
   selectIsLoading,
 } from '../../redux/contacts/contactSelectors';
 import { fetchContactsThunk } from '../../redux/contacts/contactsOps';
+import s from './Contacts.module.css';
 
 const Contacts = () => {
   const isLoading = useSelector(selectIsLoading);
@@ -22,7 +23,7 @@ const Contacts = () => {
   return (
     <div>
       <h1>Phone-book</h1>
-      <div className="actionBox">
+      <div className={s.actionBox}>
         <ContactForm />
         <SearchBox />
       </div>

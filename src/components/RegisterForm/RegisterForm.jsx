@@ -3,6 +3,7 @@ import { useId } from 'react';
 import { useDispatch } from 'react-redux';
 import * as Yup from 'yup';
 import { register } from '../../redux/auth/authOps';
+import { Link } from 'react-router-dom';
 
 const RegisterForm = () => {
   const usernameId = useId();
@@ -22,6 +23,7 @@ const RegisterForm = () => {
       .max(50, 'Too long')
       .required('Required'),
     email: Yup.string()
+      .email('Must be a valid email')
       .min(5, 'Too short')
       .max(50, 'Too long')
       .required('Required'),
@@ -32,7 +34,6 @@ const RegisterForm = () => {
   });
 
   const handleSubmit = (values, actions) => {
-    console.log(values);
     dispatch(register(values));
     actions.resetForm();
   };
@@ -78,6 +79,10 @@ const RegisterForm = () => {
           <button type="submit">Login</button>
         </Form>
       </Formik>
+      <p>
+        Already have an account?
+        <Link to="/login"> Login now!</Link>
+      </p>
     </>
   );
 };

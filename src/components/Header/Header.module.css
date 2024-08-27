@@ -1,0 +1,21 @@
+.header {
+  background-color: #0476d0;
+  padding: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+}
+
+.authSection {
+  display: flex;
+  align-items: center;
+}
