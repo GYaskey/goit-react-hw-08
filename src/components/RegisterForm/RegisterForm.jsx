@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import * as Yup from 'yup';
 import { register } from '../../redux/auth/authOps';
 import { Link } from 'react-router-dom';
+import s from './RegisterForm.module.css';
 
 const RegisterForm = () => {
   const usernameId = useId();
@@ -45,43 +46,61 @@ const RegisterForm = () => {
         onSubmit={handleSubmit}
         validationSchema={RegisterSchema}
       >
-        <Form>
-          <label htmlFor={usernameId}>
+        <Form className={s.form}>
+          {' '}
+          <label htmlFor={usernameId} className={s.label}>
+            {' '}
             Username
             <Field
               name="name"
               id={usernameId}
               type="text"
               placeholder="Type your name"
+              className={s.input}
             />
-            <ErrorMessage name="name" component="span" />
+            <ErrorMessage name="name" component="span" className={s.error} />{' '}
           </label>
-          <label htmlFor={emailId}>
+          <label htmlFor={emailId} className={s.label}>
+            {' '}
             Email
             <Field
               name="email"
               id={emailId}
               type="email"
               placeholder="Type your email"
+              className={s.input}
             />
-            <ErrorMessage name="email" component="span" />
+            <ErrorMessage name="email" component="span" className={s.error} />{' '}
           </label>
-          <label htmlFor={passwordId}>
+          <label htmlFor={passwordId} className={s.label}>
+            {' '}
             Password
             <Field
               name="password"
               id={passwordId}
               type="password"
               placeholder="Type your password"
+              className={s.input}
             />
-            <ErrorMessage name="password" component="span" />
+            <ErrorMessage
+              name="password"
+              component="span"
+              className={s.error}
+            />{' '}
           </label>
-          <button type="submit">Login</button>
+          <button type="submit" className={s.btn}>
+            {' '}
+            Register
+          </button>
         </Form>
       </Formik>
-      <p>
+      <p className={s.text}>
+        {' '}
         Already have an account?
-        <Link to="/login"> Login now!</Link>
+        <Link to="/login" className={s.cta}>
+          {' '}
+          Login now!
+        </Link>
       </p>
     </>
   );

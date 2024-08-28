@@ -1,23 +1,23 @@
-.link {
-  font-size: 16px;
-  color: #041f60;
-  text-decoration: none;
-  margin-right: 15px;
-  padding: 8px 12px;
-  background-color: #b4f5f0;
-  border: 1px solid transparent;
-  border-radius: 5px;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+.authBox {
+  display: flex;
+  gap: 20px;
 }
 
-.link:hover {
-  background-color: #fecf01;
-  color: #041f60;
+.link {
+  color: #d0bdf4;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .active {
-  background-color: #fecf01;
-  color: #041f60;
-  border: 1px solid #041f60;
+  color: #a0d2eb;
+  transform: scale(1.05);
+  font-weight: bold;
+}
+
+.link:hover {
+  color: #a0d2eb;
+  transform: scale(1.05);
   font-weight: bold;
 }

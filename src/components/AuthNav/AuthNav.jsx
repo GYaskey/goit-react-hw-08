@@ -6,12 +6,14 @@ const AuthNav = () => {
 
   return (
     <>
-      <NavLink to="/login" className={addActive}>
-        Login
-      </NavLink>
-      <NavLink to="/signup" className={addActive}>
-        Sign Up
-      </NavLink>
+      <span className={s.authBox}>
+        <NavLink to="/login" className={addActive}>
+          Login
+        </NavLink>
+        <NavLink to="/signup" className={addActive}>
+          Sign Up
+        </NavLink>
+      </span>
     </>
   );
 };

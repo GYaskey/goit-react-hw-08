@@ -1,24 +1,24 @@
 .userMenu {
   display: flex;
   align-items: center;
-  color: #041f60;
+  gap: 20px;
 }
 
 .welcomeText {
-  margin-right: 15px;
   font-size: 16px;
 }
 
 .signUp {
-  background-color: #fecf01;
-  color: #041f60;
+  background-color: #8458b3;
+  color: #ffffff;
   border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
+  padding: 5px 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .signUp:hover {
-  background-color: #0476d0;
+  background-color: #a0d2eb;
+  transform: scale(1.05);
 }

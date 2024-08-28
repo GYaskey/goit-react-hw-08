@@ -1,58 +1,45 @@
 .form {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   width: 400px;
-
-  padding: 20px;
-  background-color: #024950;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  color: #afdde5;
 }
 
 .formLabel {
+  color: #494d5f;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  font-size: 16px;
-  font-weight: 600;
 }
 
 .input {
   padding: 10px;
-  border: 1px solid #003135;
-  border-radius: 4px;
-  font-size: 16px;
+  border: 2px solid #d0bdf4;
+  border-radius: 5px;
+  transition: border-color 0.3s ease-in-out;
   outline: none;
-  transition: border-color 0.3s ease;
 }
 
 .input:focus {
-  border-color: #0fa4af;
+  border-color: #a0d2eb;
 }
 
 .error {
-  color: #964734;
+  color: #8458b3;
   font-size: 14px;
 }
 
 .btn {
-  background-color: #964734;
-  color: #afdde5;
+  background-color: #8458b3;
+  color: #ffffff;
   border: none;
-  outline: none;
-  padding: 8px 12px;
-  border-radius: 5px;
+  padding: 10px 20px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  font-weight: 700;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.btn:hover,
-.btn:focus {
-  background-color: #003135;
-  color: #afdde5;
-  outline: none;
-  border: none;
+.btn:hover {
+  background-color: #a0d2eb;
+  transform: scale(1.05);
 }

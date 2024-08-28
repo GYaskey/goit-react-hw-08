@@ -1,31 +1,23 @@
 .searchBox {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   gap: 10px;
+  color: #494d5f;
   width: 400px;
-
-  padding: 15px;
-  background-color: #003135;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  color: #afdde5;
 }
 
 .searchLabel {
-  font-size: 16px;
-  font-weight: 600;
-  color: #afdde5;
+  font-weight: bold;
 }
 
 .searchField {
   padding: 10px;
-  border: 1px solid #024950;
-  border-radius: 4px;
-  font-size: 16px;
+  border: 2px solid #d0bdf4;
+  border-radius: 5px;
+  transition: border-color 0.3s ease-in-out;
   outline: none;
-  transition: border-color 0.3s ease;
 }
 
 .searchField:focus {
-  border-color: #0fa4af;
+  border-color: #a0d2eb;
 }

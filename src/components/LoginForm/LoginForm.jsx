@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import * as Yup from 'yup';
 import { logIn } from '../../redux/auth/authOps';
 import { Link } from 'react-router-dom';
+import s from './LoginForm.module.css';
 
 const LoginForm = () => {
   const passwordId = useId();
@@ -31,6 +32,7 @@ const LoginForm = () => {
     dispatch(logIn(values));
     actions.resetForm();
   };
+
   return (
     <>
       <Formik
@@ -38,33 +40,44 @@ const LoginForm = () => {
         onSubmit={handleSubmit}
         validationSchema={LoginSchema}
       >
-        <Form>
-          <label htmlFor={emailId}>
+        <Form className={s.form}>
+          <label htmlFor={emailId} className={s.label}>
             Email
             <Field
               name="email"
               id={emailId}
               type="email"
               placeholder="Type your email"
+              className={s.input}
             />
-            <ErrorMessage name="email" component="span" />
+            <ErrorMessage name="email" component="span" className={s.error} />
           </label>
-          <label htmlFor={passwordId}>
+          <label htmlFor={passwordId} className={s.label}>
             Password
             <Field
               name="password"
               id={passwordId}
               type="password"
               placeholder="Type your password"
+              className={s.input}
             />
-            <ErrorMessage name="password" component="span" />
+            <ErrorMessage
+              name="password"
+              component="span"
+              className={s.error}
+            />
           </label>
-          <button type="submit">Login</button>
+          <button type="submit" className={s.btn}>
+            Login
+          </button>
         </Form>
       </Formik>
-      <p>
+      <p className={s.text}>
         Don`t have an account yet?
-        <Link to="/signup"> Sign up now!</Link>
+        <Link to="/signup" className={s.cta}>
+          {' '}
+          Sign up now!
+        </Link>
       </p>
     </>
   );
