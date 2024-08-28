@@ -3,7 +3,7 @@ import s from './ContactForm.module.css';
 import { useId } from 'react';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
-import { addContactThunk } from '../../redux/contacts/contactsOps';
+import { addContactThunk } from '../../redux/contacts/operations';
 
 const ContactForm = () => {
   const usernameID = useId();

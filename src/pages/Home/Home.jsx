@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
-import { selectIsLoggedIn } from '../../redux/auth/authSelectors';
 import { NavLink } from 'react-router-dom';
 import s from './Home.module.css';
+import { selectIsLoggedIn } from '../../redux/auth/selectors';
 
 const Home = () => {
   const addActive = ({ isActive }) => (isActive ? s.active : s.link);

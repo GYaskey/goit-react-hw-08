@@ -1,16 +1,16 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { Suspense, useEffect } from 'react';
+import { selectIsRefreshing } from './redux/auth/selectors';
+import { refresh } from './redux/auth/operations';
 import Layout from './components/Layout/Layout';
 import NotFound from './pages/NotFound/NotFound';
 import Home from './pages/Home/Home';
 import Contacts from './pages/Contacts/Contacts';
 import Login from './pages/Login/Login';
 import SignUp from './pages/SignUp/SignUp';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectIsRefreshing } from './redux/auth/authSelectors';
 import Loader from './components/Loader/Loader';
-import { Suspense, useEffect } from 'react';
-import { refresh } from './redux/auth/authOps';
 import PublicRoute from './components/PublicRoute';
 import PrivateRoute from './components/PrivateRoute';
 

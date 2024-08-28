@@ -2,9 +2,9 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { useId } from 'react';
 import { useDispatch } from 'react-redux';
 import * as Yup from 'yup';
-import { logIn } from '../../redux/auth/authOps';
 import { Link } from 'react-router-dom';
 import s from './LoginForm.module.css';
+import { logIn } from '../../redux/auth/operations';
 
 const LoginForm = () => {
   const passwordId = useId();

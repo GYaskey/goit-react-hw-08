@@ -4,12 +4,9 @@ import ContactForm from '../../components/ContactForm/ContactForm';
 import SearchBox from '../../components/SearchBox/SearchBox';
 import Loader from '../../components/Loader/Loader';
 import ContactList from '../../components/ContactList/ContactList';
-import {
-  selectIsError,
-  selectIsLoading,
-} from '../../redux/contacts/contactSelectors';
-import { fetchContactsThunk } from '../../redux/contacts/contactsOps';
+import { fetchContactsThunk } from '../../redux/contacts/operations';
 import s from './Contacts.module.css';
+import { selectIsError, selectIsLoading } from '../../redux/contacts/selectors';
 
 const Contacts = () => {
   const isLoading = useSelector(selectIsLoading);
