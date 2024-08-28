@@ -10,7 +10,7 @@ const UserMenu = () => {
     <div className={s.userMenu}>
       <p className={s.welcomeText}>Welcome, {user.name}</p>
       <button
-        className={s.signUp}
+        className={s.logout}
         type="button"
         onClick={() => dispatch(logOut())}
       >

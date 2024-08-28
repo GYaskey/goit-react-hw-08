@@ -9,3 +9,11 @@ h1 {
   align-items: flex-end;
   margin: 50px auto;
 }
+
+@media (max-width: 768px) {
+  .actionBox {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+  }
+}

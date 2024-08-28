@@ -1,7 +1,6 @@
 .link {
   color: #d0bdf4;
   text-decoration: none;
-  margin-right: 20px;
   font-weight: bold;
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }

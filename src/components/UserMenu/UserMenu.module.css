@@ -6,19 +6,21 @@
 
 .welcomeText {
   font-size: 16px;
+  color: #a0d2eb;
 }
 
-.signUp {
+.logout {
   background-color: #8458b3;
   color: #ffffff;
   border: none;
   padding: 5px 10px;
   cursor: pointer;
+  border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.signUp:hover {
+.logout:hover {
   background-color: #a0d2eb;
   transform: scale(1.05);
 }
