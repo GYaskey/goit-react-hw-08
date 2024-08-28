@@ -13,13 +13,13 @@ const SearchBox = () => {
   return (
     <div className={s.searchBox}>
       <label htmlFor="searchId" className={s.searchLabel}>
-        Find contacts by name
+        Find contacts
       </label>
       <input
         value={filterValue}
         onChange={e => dispatch(changeFilter(e.target.value))}
         type="text"
-        placeholder="Type your request..."
+        placeholder="Type name or number..."
         id={searchId}
         className={s.searchField}
       />

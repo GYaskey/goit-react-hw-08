@@ -7,7 +7,7 @@ import Contacts from './pages/Contacts/Contacts';
 import Login from './pages/Login/Login';
 import SignUp from './pages/SignUp/SignUp';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectIsError, selectIsRefreshing } from './redux/auth/authSelectors';
+import { selectIsRefreshing } from './redux/auth/authSelectors';
 import Loader from './components/Loader/Loader';
 import { Suspense, useEffect } from 'react';
 import { refresh } from './redux/auth/authOps';
@@ -16,9 +16,7 @@ import PrivateRoute from './components/PrivateRoute';
 
 const App = () => {
   const isRefresh = useSelector(selectIsRefreshing);
-  const isError = useSelector(selectIsError);
 
-  if (isError) console.log(isError);
   const dispatch = useDispatch();
 
   useEffect(() => {

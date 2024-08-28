@@ -29,7 +29,11 @@ const Contacts = () => {
       </div>
       <div>
         {isLoading && !isError && <Loader />}
-        {isError ? <p>Something went wrong</p> : <ContactList />}
+        {isError ? (
+          <p className={s.fail}>Could not retrieve your contacts</p>
+        ) : (
+          <ContactList />
+        )}
       </div>
     </div>
   );

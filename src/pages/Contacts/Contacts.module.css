@@ -17,3 +17,8 @@ h1 {
     gap: 50px;
   }
 }
+
+.fail {
+  color: 003135;
+  text-align: center;
+}

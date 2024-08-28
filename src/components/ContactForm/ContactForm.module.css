@@ -6,7 +6,7 @@
 }
 
 .formLabel {
-  color: #494d5f;
+  color: #003135;
   font-weight: bold;
   display: flex;
   flex-direction: column;
@@ -36,10 +36,16 @@
   padding: 10px 20px;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
 }
 
 .btn:hover {
-  background-color: #a0d2eb;
+  color: #a0d2eb;
   transform: scale(1.05);
+  border: 1px solid #a0d2eb;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
