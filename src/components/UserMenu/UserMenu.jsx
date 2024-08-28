@@ -8,7 +8,7 @@ const UserMenu = () => {
   const dispatch = useDispatch();
   return (
     <div className={s.userMenu}>
-      <p className={s.welcomeText}>Welcome, {user}</p>
+      <p className={s.welcomeText}>Welcome, {user.name}</p>
       <button
         className={s.signUp}
         type="button"

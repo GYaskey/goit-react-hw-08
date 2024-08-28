@@ -34,7 +34,7 @@ const LoginForm = () => {
   };
 
   return (
-    <>
+    <div>
       <Formik
         initialValues={initValues}
         onSubmit={handleSubmit}
@@ -79,7 +79,7 @@ const LoginForm = () => {
           Sign up now!
         </Link>
       </p>
-    </>
+    </div>
   );
 };
 
